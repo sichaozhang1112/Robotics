@@ -10,7 +10,7 @@ input_start = [0,0];
 input_end = [10,10];
 input= [input_start;input_end];
 %ÕÏ°­Îï
-obs_num=20;
+obs_num=30;
 obs = zeros(obs_num,4);
 for i=1:obs_num
     obs_tmp(1,1) = round(rand(1)*1+1*i-1);
@@ -44,7 +44,7 @@ end
 g=1;h=1;
 % g=0,h=1 BFS
 % g=1,h=0 Dijkstra
-path=PlannerAStart(input,env,obs,g,h);
+path=PlannerAStar(input,env,obs,g,h);
 
 %% »æÖÆ
 figure();

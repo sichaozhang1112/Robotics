@@ -1,7 +1,7 @@
 % function main
 clear all;
 close all;
-load plan;
+% load plan;
 i = 1; % the ith Curve
 x = sort(10*rand(1,100));
 y = sin(x*rand(1)*pi)+0.5*cos(x*3*rand(1)*pi)+2*sin(x*rand(1)*pi);

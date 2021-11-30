@@ -1,6 +1,6 @@
 clear all;
 close all;
-%% 设置
+%% 设置 
 %环境设置
 env_start = [0,0];
 env_end = [10,10];
@@ -10,7 +10,7 @@ input_start = [rand(1)*10,env_start(2)];
 input_end = [rand(1)*10,env_end(2)];
 input= [input_start;input_end];
 %障碍物
-obs_num=15;
+obs_num=1;
 obs = zeros(obs_num,4);
 for i=1:obs_num
     obs_tmp(1,1) = rand(1)*8+1;
@@ -44,7 +44,7 @@ end
 iter_max=10000;
 step_len=0.1;
 goal_sample_rate=0.5;
-search_radius=5;
+search_radius=1;
 % path=PlannerRRT(input,env,obs,iter_max,step_len,goal_sample_rate);
 path=PlannerRRTStar(input,env,obs,iter_max,step_len,goal_sample_rate,search_radius);
 % path=PlannerRRTStarSmart(input,env,obs,iter_max,step_len,goal_sample_rate,search_radius);
